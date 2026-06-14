@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Medical Poster – Penicillamine-Induced Nephrotic Syndrome in SSc</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/*
+  ═══════════════════════════════════════════════════════
+  CLEAN ACADEMIC TEMPLATE — Slate + Ivory + Steel accent
+  A1 Portrait: 841 × 594 mm / screen 1190 × 1684px
+  
+  PALETTE — restrained, professional, low-saturation
+    --navy  : #1e2d40   primary dark (headers)
+    --steel : #3e6080   medium accent
+    --mist  : #6b8fa8   light accent
+    --ivory : #f8f6f1   warm off-white background
+    --cream : #efefea   card/panel bg
+    --linen : #e4e2db   dividers / borders
+    --ink   : #1c2b38   body text
+    --ink2  : #4a5a68   secondary text
+    --red   : #8c3030   critical values
+    --grn   : #2a5c35   confirmed/positive
+    --amber : #7a5210   considered
+    --white : #ffffff
+  ═══════════════════════════════════════════════════════
+*/
+
+
+@page {
+    size: A1 landscape;   /* یا فقط A1 اگر عمودی می‌خوای */
+    margin: 10mm;
+}
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+:root {
+  --navy  : #1e2d40;
+  --navy2 : #2c4560;
+  --steel : #3e6080;
+  --mist  : #6b8fa8;
+  --mist2 : #b8d0e0;
+  --ivory : #f8f6f1;
+  --cream : #f2f0eb;
+  --linen : #dddbd4;
+  --ink   : #1c2b38;
+  --ink2  : #4a5a68;
+  --red   : #8c3030;
+  --red2  : #f9efef;
+  --grn   : #2a5c35;
+  --grn2  : #edf5ef;
+  --amb   : #7a5210;
+  --amb2  : #fdf6e8;
+  --white : #ffffff;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+html, body {
+  background: #70808e;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size:16px;
+  color: var(--ink);
+}
+
+
+/* ── POSTER SHELL ── */
+.poster {
+  width: 1190px;
+  min-height: 1684px;
+  margin:15.5px auto;
+  background: var(--ivory);
+  box-shadow: 0 14px 64px rgba(0,0,0,.45);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── TOPBAR ── */
+.topbar {
+  background: var(--navy);
+  border-bottom: 3px solid var(--steel);
+  padding:7px 28px;
+  display: flex; align-items: center; gap:12px;
+  flex-shrink: 0;
+}
+.tlogo {
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,.12);
+  border: 1.5px solid rgba(255,255,255,.25);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size:21.5px; flex-shrink: 0;
+}
+.tname .tn { font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; color:#fff; }
+.tname .ts { font-size:9.5px; color:rgba(255,255,255,.5); letter-spacing:.3px; }
+.topill {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.3);
+  color: rgba(255,255,255,.7);
+  font-family:'Montserrat',sans-serif; font-weight:600;
+  font-size:8.5px; letter-spacing:1px; text-transform:uppercase;
+  padding:2.5px 10px; border-radius: 2px;
+}
+
+/* ── HEADER ── */
+.hdr {
+  background: var(--navy);
+  padding:15.5px 28px 16px;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--navy2);
+}
+.hdr-inner { display:flex; align-items:center; gap:17px; }
+.hdr-text  { flex:1; }
+.badge-event {
+  display:inline-block;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.3);
+  color: rgba(255,255,255,.6);
+  font-family:'Source Sans 3',sans-serif; font-weight:600;
+  font-size:9px; letter-spacing:1.2px; text-transform:uppercase;
+  padding:1.5px 9px; border-radius:2px; margin-bottom:8.5px;
+}
+.ptitle {
+  font-family:'Merriweather',serif;
+  font-size:36px; font-weight:700; color:#fff;
+  line-height:1.12; letter-spacing:-.2px; margin-bottom:7px;
+}
+.ptitle em { color:var(--mist2); font-style:normal; }
+.psub {
+  font-size:11px; color:rgba(255,255,255,.55);
+  font-style:italic; line-height:1.26; margin-bottom:8.5px;
+}
+.arow { display:flex; gap:24px; flex-wrap:wrap; align-items:center; }
+.acard { text-align:left; }
+.aname { font-family:'Source Sans 3',sans-serif; font-weight:700; font-size:11.5px; color:rgba(255,255,255,.9); }
+.arole { font-size:9.5px; color:rgba(255,255,255,.45); }
+.qr-box {
+  width:68px; height:68px; background:var(--white);
+  border-radius:4px; flex-shrink:0;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:1.5px; padding:4px;
+}
+.qr-box svg { width:44px; height:44px; }
+.qr-lbl { font-size:7.5px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:.4px; }
+
+/* ── ACCENT LINE ── */
+.stripe {
+  height: 4px;
+  background: linear-gradient(90deg, var(--steel) 0%, var(--mist) 60%, var(--mist2) 100%);
+  flex-shrink: 0;
+}
+
+/* ─────────────────────────────────────────────────
+   3-COLUMN BODY: left (narrow) | centre (wide) | right (narrow)
+───────────────────────────────────────────────── */
+.body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 240px 1fr 240px;
+  gap: 0;
+  background: var(--linen);
+  position: relative;
+}
+.col-side {
+  background: var(--cream);
+  padding:10px 11px;
+  display: flex; flex-direction: column; gap:7px;
+  border-right: 1px solid var(--linen);
+}
+.col-side:last-child { border-right: none; border-left: 1px solid var(--linen); }
+.col-center {
+  background: var(--ivory);
+  padding:12px 16px;
+  display: flex; flex-direction: column; gap:8.5px;
+}
+
+/* ── CARD ── */
+.card {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid var(--linen);
+  background: var(--white);
+  flex-shrink: 0;
+}
+.card.grow { flex:1; display:flex; flex-direction:column; }
+.card.grow .cb { flex:1; }
+
+/* card header variants */
+.ch {
+  display:flex; align-items:center; gap:6px; padding:5px 11px;
+  font-family:'Montserrat',sans-serif; font-weight:700;
+  font-size:15px; letter-spacing:.7px; text-transform:uppercase;
+  border-bottom: 1px solid var(--linen);
+}
+.ch .ico { font-size:12px; }
+.ch-navy  { background:var(--navy);  color:#fff; border-bottom:none; }
+.ch-steel { background:var(--steel); color:#fff; border-bottom:none; }
+.ch-mist  { background:var(--mist);  color:#fff; border-bottom:none; }
+.ch-grn   { background:var(--grn);   color:#fff; border-bottom:none; }
+.ch-red   { background:var(--red);   color:#fff; border-bottom:none; }
+.ch-amb   { background:var(--amb);   color:#fff; border-bottom:none; }
+.ch-light { background:var(--cream); color:var(--navy); }
+
+.cb { padding:7.5px 11px; font-size:12.5px; line-height:1.4; color:var(--ink); background:var(--white); }
+.cb p { margin-bottom:3.5px; }
+.cb p:last-child { margin-bottom:0; }
+
+/* ── TYPOGRAPHY ── */
+b   { color: var(--navy); }
+em  { color: var(--steel); font-style:normal; font-weight:600; }
+.ab { color: var(--red); font-weight:700; }
+.crit { background:#fde8e8!important; color:var(--red); font-weight:700; }
+small { font-size:8.5px; color:var(--ink2); }
+
+/* ── CALLOUT BOXES ── */
+.box {
+  border-left:3px solid var(--mist); background:var(--cream);
+  padding:5px 9px; border-radius:0 4px 4px 0; margin:4px 0;
+  font-size:10.5px; line-height:1.35;
+}
+.box.red { border-color:var(--red);  background:var(--red2); }
+.box.grn { border-color:var(--grn);  background:var(--grn2); }
+.box.amb { border-color:var(--amb);  background:var(--amb2); }
+.box.navy{ border-color:var(--navy); background:var(--navy); color:#fff; }
+.box.navy b { color:var(--mist2); }
+
+/* ── CHIPS ── */
+.chips { display:flex; flex-wrap:wrap; gap:3.5px; margin-bottom:5px; }
+.chip  { background:var(--cream); border:1px solid var(--linen); border-radius:2px; padding:1.5px 8px; font-size:9.5px; font-weight:600; color:var(--ink2); }
+
+/* ── VITALS ── */
+.vrow { display:grid; grid-template-columns:repeat(4,1fr); gap:4px; margin:5px 0; }
+.vb   { background:var(--cream); border:1px solid var(--linen); border-radius:4px; padding:4px 4px; text-align:center; }
+.vv   { font-family:'Merriweather',serif; font-size:14px; font-weight:700; color:var(--navy); }
+.vl   { font-size:7.5px; color:var(--ink2); text-transform:uppercase; letter-spacing:.4px; margin-top:1px; }
+
+/* ── PHOTO PLACEHOLDER ── */
+.ph {
+  border:1.5px dashed var(--linen); border-radius:4px;
+  background:var(--cream);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:2.5px; color:var(--ink2); font-size:9.5px; font-weight:600;
+  text-align:center; padding:6px 6px;
+}
+.ph .pi { font-size:21.5px; opacity:.5; }
+.ph .pl { line-height:1.17; font-size:9px; }
+.ph .ps { font-size:8px; font-weight:400; color:var(--mist); }
+.ph-row { display:grid; grid-template-columns:1fr 1fr; gap:5px; margin:5px 0; }
+
+/* ── TABLES ── */
+.tbl { width:100%; border-collapse:collapse; font-size:12px; }
+.tbl th { background:var(--navy); color:#fff; padding:3.5px 7px; text-align:left; font-weight:600; font-size:9px; }
+.tbl td { padding:2.5px 7px; border-bottom:1px solid var(--linen); vertical-align:top; }
+.tbl tr:nth-child(even) td { background:var(--cream); }
+.tbl.grn th { background:var(--grn); }
+.tbl.steel th { background:var(--steel); }
+
+/* ── DDX LIST ── */
+.ddx { list-style:none; padding:0; }
+.ddx li { display:flex; align-items:flex-start; gap:5px; padding:2.5px 7px; border-radius:3px; margin-bottom:2.5px; font-size:11px; border-left:3px solid transparent; line-height:1.26; }
+.ddx li.ok  { background:var(--grn2); border-color:var(--grn); }
+.ddx li.may { background:var(--amb2); border-color:var(--amb); }
+.ddx li.no  { background:var(--cream); border-color:var(--linen); color:var(--ink2); text-decoration:line-through; opacity:.65; }
+.badge { font-size:8px; font-weight:700; padding:1px 5px; border-radius:2px; flex-shrink:0; text-transform:uppercase; }
+.bk { background:var(--grn); color:#fff; }
+.bm { background:var(--amb); color:#fff; }
+.bn { background:#9aabba; color:#fff; }
+
+/* ── TIMELINE ── */
+.tl  { margin:3.5px 0; }
+.tli { display:flex; gap:7.5px; margin-bottom:7px; position:relative; }
+.tli:not(:last-child)::after { content:''; position:absolute; left:11px; top:24px; width:2px; height:calc(100% - 6px); background:var(--linen); }
+.tld { width:22px; height:22px; flex-shrink:0; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; z-index:1; }
+.tlc { flex:1; padding-top:1px; }
+.tlt { font-size:9.5px; font-weight:700; color:var(--steel); text-transform:uppercase; letter-spacing:.5px; }
+.tlx { font-size:11px; line-height:1.26; margin-top:1px; }
+
+/* ── TREATMENT STEPS ── */
+.txs { display:flex; flex-direction:column; gap:4px; }
+.tx-step { display:flex; align-items:flex-start; gap:7.5px; background:var(--cream); border:1px solid var(--linen); border-radius:4px; padding:5px 10px; }
+.txn { width:18px; height:18px; flex-shrink:0; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Montserrat',sans-serif; font-size:8.5px; font-weight:800; color:#fff; }
+.txt { font-size:12px; font-weight:700; color:var(--ink); }
+.txd { font-size:10.5px; color:var(--ink2); margin-top:1px; line-height:1.26; }
+
+/* ── LEARNING POINTS ── */
+.lpl { list-style:none; padding:0; counter-reset:lc; }
+.lpl li {
+  counter-increment:lc; display:flex; gap:7.5px; align-items:flex-start;
+  padding:5px 10px; margin-bottom:4px;
+  background:var(--cream); border:1px solid var(--linen);
+  border-radius:4px; font-size:11px; line-height:1.35; color:var(--ink);
+  min-width:0;
+}
+.lpl li > * { min-width:0; }
+.lpl li::before {
+  content:counter(lc); flex-shrink:0; width:18px; height:18px;
+  background:var(--navy);
+  color:#fff; font-family:'Montserrat',sans-serif; font-weight:800;
+  font-size:9px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+}
+
+/* ── REFERENCES ── */
+.refs { list-style:none; padding:0; }
+.refs li { font-size:8.5px; color:var(--ink2); line-height:1.4; margin-bottom:3.5px; padding-left:12px; position:relative; }
+.refs li::before { content:''; position:absolute; left:0; top:7px; width:7px; height:1.5px; background:var(--mist); }
+
+/* ── SSc MULTISYSTEM GRID ── */
+.ss-grid { display:grid; grid-template-columns:1fr 1fr; gap:3.5px; margin:4px 0; }
+.ss-item { border-radius:3px; padding:4px 7px; font-size:9px; line-height:1.17; background:var(--cream); border:1px solid var(--linen); }
+.ss-ico  { font-size:12px; display:block; margin-bottom:1px; }
+.ss-nm   { font-weight:700; font-size:9px; color:var(--navy); }
+.ss-ds   { color:var(--ink2); font-size:10px; margin-top:1px; }
+
+/* ── WORKUP TREE ── */
+.wt-root { background:var(--navy); color:#fff; border-radius:3px; padding:3.5px 8px; text-align:center; font-weight:700; font-size:9.5px; margin-bottom:3.5px; }
+.wt-ar   { display:flex; justify-content:space-around; font-size:11px; color:var(--mist); margin-bottom:1.5px; }
+.wt-br   { display:grid; grid-template-columns:1fr 1fr 1fr; gap:2.5px; }
+.wt-b    { border-radius:3px; padding:3.5px 4px; font-size:8.5px; text-align:center; font-weight:700; line-height:1.17; }
+
+/* ── ABSTRACT BOX ── */
+.abs-box {
+  background:var(--cream); border:1px solid var(--linen); border-radius:4px;
+  padding:7.5px 11px; font-size:12px; line-height:1.44; font-style:italic;
+}
+.abs-box strong { font-style:normal; color:var(--navy); }
+
+/* ── 2-COL GRID ── */
+.g2 { display:grid; grid-template-columns:1fr 1fr; gap:5px; }
+
+/* ── DIVIDER ── */
+hr.dv { border:none; height:1px; background:var(--linen); margin:5px 0; }
+.slbl { font-family:'Montserrat',sans-serif; font-size:8px; font-weight:700; text-transform:uppercase; letter-spacing:.6px; margin-bottom:3.5px; color:var(--ink2); }
+.tag  { display:inline-block; background:var(--cream); color:var(--navy); border:1px solid var(--linen); border-radius:2px; padding:1px 6px; font-size:8.5px; font-weight:600; margin:1px; }
+
+/* ── CENTRE PANEL COMPOSITE CARD ── */
+.centre-card {
+  border:1px solid var(--linen);
+  border-radius:5px;
+  overflow:hidden;
+  background:var(--white);
+}
+.centre-card-title {
+  background:var(--navy);
+  color:#fff;
+  font-family:'Montserrat',sans-serif;
+  font-weight:700; font-size:11px; letter-spacing:.8px; text-transform:uppercase;
+  padding:6px 14px;
+  display:flex; align-items:center; gap:7px;
+}
+.centre-sections {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:auto auto;
+  gap:0;
+  background:var(--linen);
+}
+.cs {
+  background:var(--white);
+  padding:9.5px 13px;
+}
+.cs-title {
+  font-family:'Montserrat',sans-serif;
+  font-weight:700; font-size:10px; letter-spacing:.7px; text-transform:uppercase;
+  color:var(--steel);
+  border-bottom:1.5px solid var(--linen);
+  padding-bottom:4px; margin-bottom:6px;
+  display:flex; align-items:center; gap:5px;
+}
+/* full-width section inside centre */
+.cs.full { grid-column: 1 / -1; border-top:1px solid var(--linen); }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--navy);
+  border-top: 3px solid var(--steel);
+  padding:7px 28px; flex-shrink:0;
+  display:flex; justify-content:space-between; align-items:center;
+  color:rgba(255,255,255,.45); font-size:9px;
+}
+.footer strong { color: rgba(255,255,255,.8); }
+
+/* ── PRINT ── */
+/* @media print {
+  html,body { background:#fff; }
+  .poster { width:594mm; min-height:841mm; margin:0; box-shadow:none; }
+  body { margin:0; padding:0; }
+} */
+</style>
+</head>
+<body>
+<div class="poster">
+
+<!-- ══ TOPBAR ══ -->
+<div class="topbar">
+  <div class="tlogo">🏥</div>
+  <div class="tname">
+    <div class="tn">Rasoul Akram Hospital</div>
+    <div class="ts">The Educational, Research, and Treatment Complex · Tehran, Iran</div>
+  </div>
+  <div class="topill">Clinical Poster · June 2026</div>
+</div>
+
+<!-- ══ HEADER ══ -->
+<div class="hdr">
+  <div class="hdr-inner">
+    <div class="hdr-text">
+      <div class="badge-event">Case Report · Internal Medicine · Nephrology / Rheumatology</div>
+      <div class="ptitle">
+       From Edema to Scleroderma
+      </div>
+      <div class="psub">Drug-induced membranous nephropathy in a patient with systemic sclerosis — education with patient narrative</div>
+      <div class="arow">
+        <div class="acard"><div class="aname">Yekta Hashemi</div><div class="arole">Medical Students</div></div>
+        <div class="acard"><div class="aname">Mehrsa Farahani</div><div class="arole">Medical Students</div></div>
+      </div>
+    </div>
+    <div class="qr-box">
+      <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="16" height="16" rx="2" stroke="#1e2d40" stroke-width="2" fill="none"/>
+        <rect x="4" y="4" width="10" height="10" rx="1" fill="#1e2d40"/>
+        <rect x="35" y="1" width="16" height="16" rx="2" stroke="#1e2d40" stroke-width="2" fill="none"/>
+        <rect x="38" y="4" width="10" height="10" rx="1" fill="#1e2d40"/>
+        <rect x="1" y="35" width="16" height="16" rx="2" stroke="#1e2d40" stroke-width="2" fill="none"/>
+        <rect x="4" y="38" width="10" height="10" rx="1" fill="#1e2d40"/>
+        <rect x="21" y="1" width="3" height="3" fill="#1e2d40"/><rect x="21" y="6" width="3" height="3" fill="#1e2d40"/>
+        <rect x="21" y="11" width="3" height="3" fill="#1e2d40"/><rect x="1" y="21" width="3" height="3" fill="#1e2d40"/>
+        <rect x="6" y="21" width="3" height="3" fill="#1e2d40"/><rect x="11" y="21" width="3" height="3" fill="#1e2d40"/>
+        <rect x="21" y="21" width="3" height="3" fill="#1e2d40"/><rect x="26" y="26" width="3" height="3" fill="#1e2d40"/>
+        <rect x="35" y="21" width="3" height="3" fill="#1e2d40"/><rect x="41" y="21" width="3" height="3" fill="#1e2d40"/>
+        <rect x="47" y="21" width="3" height="3" fill="#1e2d40"/><rect x="31" y="31" width="3" height="3" fill="#1e2d40"/>
+        <rect x="37" y="35" width="3" height="3" fill="#1e2d40"/><rect x="43" y="29" width="3" height="3" fill="#1e2d40"/>
+        <rect x="21" y="37" width="3" height="3" fill="#1e2d40"/><rect x="27" y="43" width="3" height="3" fill="#1e2d40"/>
+        <rect x="43" y="43" width="3" height="3" fill="#1e2d40"/><rect x="49" y="37" width="3" height="3" fill="#1e2d40"/>
+      </svg>
+      <div class="qr-lbl">Scan · Full<br>Report</div>
+    </div>
+  </div>
+</div>
+<div class="stripe"></div>
+
+<!-- ══════════════════════════════════════════════
+     3-COLUMN BODY: side | centre | side
+══════════════════════════════════════════════ -->
+<div class="body">
+
+<!-- ══ LEFT SIDEBAR ══ -->
+<div class="col-side">
+
+  <!-- INTRODUCTION
+  <div class="card">
+    <div class="ch ch-navy"><span class="ico">📖</span> Introduction</div>
+    <div class="cb">
+      <p><b>Systemic sclerosis (SSc)</b> is a chronic autoimmune disease with vasculopathy and progressive fibrosis. Renal involvement includes <em>scleroderma renal crisis (SRC)</em> or <em>drug-induced nephropathy</em> (e.g. penicillamine).</p>
+      <p style="margin-top:4px"><b>Nephrotic syndrome (NS):</b> proteinuria &gt;3.5 g/24h · hypoalbuminaemia &lt;3.0 g/dL · generalised oedema.</p>
+       <div class="box" style="margin-top:5px">
+        Identifying SSc determines both the NS cause and long-term organ-protective strategy.
+      </div> 
+    </div>
+  </div> -->
+
+  <!-- INTRODUCTION -->
+<div class="card">
+  <div class="ch ch-navy"><span class="ico">📖</span> Introduction</div>
+  <div class="cb">
+    <p><b>Systemic sclerosis (SSc)</b> is a chronic autoimmune disease with vasculopathy and progressive fibrosis. Renal involvement includes <em>scleroderma renal crisis (SRC)</em> or <em>drug-induced nephropathy</em> (e.g. penicillamine).</p>
+    <p style="margin-top:4px"><b>Nephrotic syndrome (NS):</b> proteinuria &gt;3.5 g/24h · hypoalbuminaemia &lt;3.0 g/dL · generalised oedema.</p>
+
+    <div style="margin-top:8px; text-align:center;">
+      <img src="2.jpg"
+           alt="Systemic sclerosis diagram"
+           style="max-width:100%; height:auto; border-radius:8px;">
+    </div>
+
+  </div>
+</div>
+
+  <!-- ABSTRACT -->
+  <div class="card">
+    <div class="ch ch-steel"><span class="ico">📄</span> Abstract</div>
+    <div class="cb">
+      <div class="abs-box">A <strong>37-year-old woman</strong> on chronic penicillamine presented with <strong>2 weeks of progressive generalised oedema</strong>. Investigations revealed albumin 1.9 g/dL, proteinuria 466 mg/dL, and oliguria — confirming <strong>nephrotic syndrome</strong>. Serology and capillaroscopy established <strong>systemic sclerosis (SSc)</strong>. Penicillamine withdrawal and supportive care led to significant improvement.</div>
+    </div>
+  </div>
+
+  <!-- SSc MULTISYSTEM MANIFESTATIONS -->
+  <div class="card">
+    <div class="ch ch-mist"><span class="ico">🩻</span> SSc — Multisystem Manifestations</div>
+    <div class="cb">
+      <div class="ss-grid">
+        <div class="ss-item"><span class="ss-ico">🤲</span><div class="ss-nm">Raynaud's Phenomenon</div><div class="ss-ds">Earliest feature; capillaroscopy SSc pattern ✓ here</div></div>
+        <div class="ss-item"><span class="ss-ico">✋</span><div class="ss-nm">Skin Fibrosis</div><div class="ss-ds">Sclerodactyly, nail changes, dryness — present ✓</div></div>
+        <div class="ss-item"><span class="ss-ico">🫁</span><div class="ss-nm">Pulmonary (ILD/PAH)</div><div class="ss-ds">Leading SSc mortality cause → HRCT + Echo</div></div>
+        <div class="ss-item"><span class="ss-ico">🍽️</span><div class="ss-nm">GI Involvement</div><div class="ss-ds">Dysmotility, GERD; nausea/anorexia — present ✓</div></div>
+        <div class="ss-item"><span class="ss-ico">🫀</span><div class="ss-nm">Cardiac</div><div class="ss-ds">Myocardial fibrosis, pericarditis; often subclinical</div></div>
+        <div class="ss-item"><span class="ss-ico">🔴</span><div class="ss-nm">Renal</div><div class="ss-ds">SRC or drug-induced MN — <b>this case</b></div></div>
+      </div>
+      <div style="font-size:8px;color:var(--ink2);margin-top:3px;text-align:center">Anti-Scl-70 → diffuse cutaneous SSc &nbsp;|&nbsp; Anti-centromere → limited cutaneous SSc</div>
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="card grow">
+    <div class="ch ch-light"><span class="ico">📚</span> References</div>
+    <div class="cb">
+      <ol class="refs">
+        <li>Kasper DL, et al. <em>Harrison's Principles of Internal Medicine</em>, 21st ed. McGraw-Hill, 2022. Ch. 305 &amp; 354.</li>
+        <li>Kumar V, Abbas AK, Aster JC. <em>Robbins &amp; Cotran Pathologic Basis of Disease</em>, 10th ed. Elsevier, 2021. Ch. 20.</li>
+        <li>Adu D, et al. Penicillamine nephropathy and nephrotic syndrome. <em>Q J Med.</em> 1988;67(253):215–233.</li>
+        <li>Denton CP, Khanna D. Systemic sclerosis. <em>Lancet.</em> 2017;390:1685–1699.</li>
+        <li>Ponticelli C, Passerini P. Drug-induced glomerulopathies. <em>Nephrol Dial Transplant.</em> 2010;25:1414–1419.</li>
+      </ol>
+      <div style="margin-top:7px">
+        <span class="tag">Nephrotic Syndrome</span>
+        <span class="tag">Systemic Sclerosis</span>
+        <span class="tag">Membranous Nephropathy</span>
+        <span class="tag">Penicillamine</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /left sidebar -->
+
+<!-- ══ CENTRE COLUMN ══ -->
+<div class="col-center">
+
+  <!-- ═══ BIG CENTRAL COMPOSITE CARD ═══ -->
+  <div class="centre-card">
+    <div class="centre-card-title">
+      <span style="font-size:15px">🏥</span>
+      Case Presentation — Patient Information · Physical Examination · Laboratory Findings · Clinical Timeline
+    </div>
+    <div class="centre-sections">
+
+      <!-- TOP-LEFT: Patient Information -->
+      <div class="cs">
+        <div class="cs-title"><span>👤</span> Patient Information</div>
+        <div class="chips">
+          <div class="chip">👩 37-Year-Old Female</div>
+          <div class="chip">💍 Married · 3 Children</div>
+          <div class="chip">🏠 Housewife · Shahriar</div>
+        </div>
+
+        <p><b>Chief Complaint:</b> Progressive generalised oedema × <em>2 weeks</em></p>
+        <p style="margin-top:3px"><b>HPI:</b> Oedema LL → UL → abdomen. Painless, non-erythematous, with heaviness and cold sensation. Multiple ED visits; Doppler USS: no DVT.</p>
+        <p style="margin-top:3px"><b>Drug History:</b> Penicillamine 250 mg q12h × ~2 years for undifferentiated CTD</p>
+        <p style="margin-top:3px"><b>PMH:</b> 3 NVDs · 1 induced abortion · thyroid medication in pregnancy</p>
+        <p style="margin-top:3px"><b>FH:</b> Mother — thalassaemia + rheumatologic disease · Sister — rheumatologic disease</p>
+      </div>
+
+      <!-- TOP-RIGHT: Physical Examination -->
+      <div class="cs" style="border-left:1px solid var(--linen)">
+        <div class="cs-title"><span>🩺</span> Physical Examination</div>
+        <div class="vrow">
+          <div class="vb"><div class="vv">120/80</div><div class="vl">BP mmHg</div></div>
+          <div class="vb"><div class="vv">91</div><div class="vl">HR bpm</div></div>
+          <div class="vb"><div class="vv">36.9°C</div><div class="vl">Temperature</div></div>
+          <div class="vb"><div class="vv">96%</div><div class="vl">SpO₂</div></div>
+        </div>
+        <p>Alert, non-toxic. S1/S2 normal, lungs clear. Abdomen distended. <b>3+ bilateral pitting oedema to sacrum.</b> Shiny skin over lower limbs. No joint tenderness.</p>
+        <hr class="dv">
+        <div class="slbl" style="margin-top:4px">Symptoms Present / Absent</div>
+        <table style="width:100%;border-collapse:collapse;font-size:10.5px">
+          <tr><td style="padding:2px 4px;color:var(--grn);font-weight:600">✓ Generalised oedema LL → UL → abdomen</td><td style="padding:2px 4px;color:var(--grn);font-weight:600">✓ Heaviness + cold lower limbs</td></tr>
+          <tr><td style="padding:2px 4px;color:var(--grn);font-weight:600">✓ Dyspnoea × 2 post-meal</td><td style="padding:2px 4px;color:var(--grn);font-weight:600">✓ Nausea / anorexia</td></tr>
+          <tr><td style="padding:2px 4px;color:var(--ink2)">✗ Fever / chest pain / cough</td><td style="padding:2px 4px;color:var(--ink2)">✗ DVT signs (Doppler negative)</td></tr>
+          <tr><td style="padding:2px 4px;color:var(--ink2)">✗ Clear Raynaud episodes</td><td style="padding:2px 4px;color:var(--ink2)">✗ Haematuria</td></tr>
+        </table>
+        <div class="box red" style="margin-top:7px;font-size:11px">
+          <b>Key finding:</b> BP 120/80 — normal → excludes SRC (requires HTN) → drug-induced nephropathy confirmed.
+        </div>
+      </div>
+
+      <!-- BOTTOM-LEFT: Laboratory Findings -->
+      <div class="cs full" style="border-top:1px solid var(--linen)">
+        <div class="g2" style="gap:10px">
+          <div>
+            <div class="cs-title"><span>🧪</span> Laboratory Findings</div>
+            <table class="tbl">
+              <thead><tr><th>Test</th><th>Result</th><th>Interpretation</th></tr></thead>
+              <tbody>
+                <tr><td><b>Haemoglobin</b></td><td class="ab">11.8 g/dL ↓</td><td>Microcytic hypochromic anaemia</td></tr>
+                <tr><td><b>Serum Albumin</b></td><td class="ab crit">1.9 g/dL ↓↓ ⚠</td><td>Severely low — critical</td></tr>
+                <tr><td><b>Total Protein</b></td><td class="ab">4.24 g/dL ↓</td><td>Markedly reduced</td></tr>
+                <tr><td><b>Serum Calcium</b></td><td class="ab">7.0 mg/dL ↓</td><td>Secondary to hypoalbuminaemia</td></tr>
+                <tr><td><b>Potassium</b></td><td class="ab">3.4 mEq/L ↓</td><td>Secondary hyperaldosteronism</td></tr>
+                <tr><td><b>Acid–Base</b></td><td class="ab">Metabolic Alkalosis</td><td>Aldosterone-driven H⁺ loss</td></tr>
+                <tr><td><b>Urine Protein (spot)</b></td><td class="ab crit">466 mg/dL ↑↑ ⚠</td><td>Heavy proteinuria — NS range</td></tr>
+                <tr><td><b>24 h Urine Volume</b></td><td class="ab">700 mL</td><td>Oliguria</td></tr>
+                <tr><td><b>Microalbumin (random)</b></td><td class="ab">91.8 mg/L ↑↑</td><td>Normal &lt;30 mg/L</td></tr>
+                <tr><td><b>CRP</b></td><td class="ab">3+ elevated</td><td>Systemic inflammation</td></tr>
+                <tr><td><b>Anti-Scl-70 / ACA</b></td><td style="color:var(--grn);font-weight:700">Positive ✓</td><td>Confirms systemic sclerosis</td></tr>
+              </tbody>
+            </table>
+            <div class="box red" style="margin-top:5px">
+              <b>Nephrotic triad:</b> Albumin 1.9 g/dL ↓↓ · Proteinuria 466 mg/dL ↑↑ · Oliguria 700 mL/24 h
+            </div>
+            <!-- <div class="box" style="margin-top:4px;font-size:9px">
+              <b>Corrected Ca²⁺:</b> 7.0 + 0.8 × (4.0 − 1.9) = <em>8.68 mg/dL</em> → borderline normal; avoid over-treatment
+            </div> -->
+          </div>
+          <div>
+            <div class="cs-title" style="margin-top:0"><span>⏱️</span> Clinical Timeline</div>
+            <div class="tl">
+              <div class="tli"><div class="tld" style="background:var(--navy);color:#fff">💊</div><div class="tlc"><div class="tlt">~2 Years Prior</div><div class="tlx">Penicillamine 250 mg q12h started for <b>undifferentiated CTD</b></div></div></div>
+              <div class="tli"><div class="tld" style="background:var(--mist);color:#fff">🧂</div><div class="tlc"><div class="tlt">~1 Year Prior</div><div class="tlx">Mild intermittent oedema — attributed to diet; no workup</div></div></div>
+              <div class="tli"><div class="tld" style="background:var(--amb);color:#fff">⚠️</div><div class="tlc"><div class="tlt">2 Months Prior</div><div class="tlx">Anorexia, nausea, stress; multiple visits — no diagnosis</div></div></div>
+              <div class="tli"><div class="tld" style="background:var(--red);color:#fff">🚨</div><div class="tlc"><div class="tlt">2 Weeks Before Admission</div><div class="tlx"><b>Sudden severe oedema</b> LL → UL → abdomen; multiple ED visits</div></div></div>
+              <div class="tli"><div class="tld" style="background:#5a1a4a;color:#fff">🏥</div><div class="tlc"><div class="tlt">Admission</div><div class="tlx">Albumin <b>1.9 g/dL</b> · Proteinuria 466 mg/dL · Oliguria · Metabolic alkalosis · CRP 3+</div></div></div>
+              <div class="tli"><div class="tld" style="background:var(--steel);color:#fff">🔬</div><div class="tlc"><div class="tlt">Diagnostic Workup</div><div class="tlx">Anti-Scl-70 ✓ · Capillaroscopy SSc pattern ✓ → SSc confirmed</div></div></div>
+              <div class="tli"><div class="tld" style="background:var(--grn);color:#fff">✓</div><div class="tlc"><div class="tlt">Treatment &amp; Outcome</div><div class="tlx"><b>Penicillamine stopped;</b> IV albumin + supportive care → oedema ↓, improvement</div></div></div>
+            </div>
+              <div style="display:flex; gap:24px; justify-content:center; align-items:center;">
+    <img src="3.jpg"
+         alt="Clinical image 1"
+         style="width:80%; height:auto; object-fit:contain; border-radius:6px;">
+
+    <!-- </div> -->
+  </div>
+          </div>
+         
+        </div>
+      </div>
+
+      
+    </div><!-- /centre-sections -->
+  </div><!-- /centre-card -->
+
+  <!-- DIAGNOSIS & DIFFERENTIAL DIAGNOSIS -->
+  <div class="card grow">
+    <div class="ch ch-mist"><span class="ico">⚗️</span> Diagnosis &amp; Differential Diagnosis</div>
+    <div class="cb">
+      <div class="g2" style="gap:14px; align-items:start">
+        <div>
+          <div class="slbl">Generalised Oedema — Systematic Approach</div>
+          <div class="wt-root">🦵 Generalised Oedema</div>
+          <div class="wt-ar"><span>↓</span><span>↓</span><span>↓</span></div>
+          <div class="wt-br">
+            <div class="wt-b" style="background:var(--cream);border:1px solid var(--linen);color:var(--navy)">💧 Renal<br><small style="color:var(--ink2)">NS · CKD · Nephritic</small></div>
+            <div class="wt-b" style="background:var(--cream);border:1px solid var(--linen);color:var(--navy)">❤️ Cardiac<br><small style="color:var(--ink2)">HF · Cor pulmonale</small></div>
+            <div class="wt-b" style="background:var(--cream);border:1px solid var(--linen);color:var(--navy)">🫁 Hepatic<br><small style="color:var(--ink2)">Cirrhosis</small></div>
+          </div>
+          <div class="wt-ar" style="margin-top:3px"><span>↓</span><span>↓</span><span>↓</span></div>
+          <div class="wt-br">
+            <div class="wt-b" style="background:var(--cream);border:1px solid var(--linen);color:var(--navy)">🦋 Endocrine<br><small style="color:var(--ink2)">Hypothyroid</small></div>
+            <div class="wt-b" style="background:var(--cream);border:1px solid var(--linen);color:var(--navy)">🔗 Autoimmune<br><small style="color:var(--ink2)">SLE · SSc</small></div>
+            <div class="wt-b" style="background:var(--navy);color:#fff">💊 Drug<br><small style="font-weight:700;color:var(--mist2)">← This case</small></div>
+          </div>
+          <div class="box grn" style="margin-top:10px">
+            <b>Confirmed in this patient:</b>  Positive ANA + Positive RO-52 + Positive SSAPositive Anti-SAcl-70 + capillaroscopy SSc pattern + skin/nail changes → <em>Systemic sclerosis diagnosed.</em>
+          </div>
+
+           <img src="6.jpg"
+       alt="Image 1"
+       style="width: 60%; height: auto; border-radius: 8px;">
+
+        </div>
+        <div>
+          <ul class="ddx">
+            <li class="ok"><span class="badge bk">✓ Final Dx</span>Penicillamine-induced NS (Membranous Nephropathy)</li>
+            <li class="ok"><span class="badge bk">Confirmed</span>Systemic sclerosis — serology + capillaroscopy</li>
+            <li class="may"><span class="badge bm">Considered</span>Scleroderma renal crisis — excluded (BP normal, no MAHA)</li>
+            <li class="may"><span class="badge bm">Considered</span>Nephritic syndrome / CKD — excluded clinically</li>
+            <li class="no"><span class="badge bn">Excluded</span>Congestive heart failure — normal cardiopulmonary exam</li>
+            <li class="no"><span class="badge bn">Excluded</span>Hepatic cirrhosis — normal LFTs, no portal hypertension</li>
+            <li class="no"><span class="badge bn">Excluded</span>Hypothyroidism — TFT normal</li>
+            <li class="no"><span class="badge bn">Excluded</span>DVT / venous obstruction — Doppler USS negative</li>
+          </ul>
+          <!-- <div class="box" style="margin-top:10px">
+            <b>Further workup (Harrison's):</b> HRCT chest (ILD) · Echo (PAH) · PFTs · Annual renal function + BP · Oesophageal motility study
+          </div>
+          <div class="ph-row">
+            <div class="ph" style="height:80px"><span class="pi">🔬</span><div class="pl">Nail-fold Capillaroscopy</div><div class="ps">SSc scleroderma pattern · 📷 Insert image</div></div>
+            <div class="ph" style="height:80px"><span class="pi">🧬</span><div class="pl">Renal Biopsy Pathology</div><div class="ps">Membranous pattern · 📷 Insert image</div></div>
+          </div> -->
+          <div style="display: flex; gap: 12px; justify-content: center; margin-top: 8px;">
+ 
+  <img src="4.jpg"
+       alt="Image 2"
+       style="width: 80%; height: auto; border-radius: 8px;">
+</div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /centre column -->
+
+<!-- ══ RIGHT SIDEBAR ══ -->
+<div class="col-side">
+
+  <!-- MANAGEMENT & OUTCOME -->
+  <div class="card">
+    <div class="ch ch-grn"><span class="ico">💊</span> Management &amp; Outcome</div>
+    <div class="cb">
+      <div class="txs">
+        <div class="tx-step"><div class="txn" style="background:var(--red)">1</div><div><div class="txt">Discontinue Penicillamine</div><div class="txd">Cornerstone — spontaneous remission in 3–12 months.</div></div></div>
+        <div class="tx-step"><div class="txn" style="background:var(--navy)">2</div><div><div class="txt">IV Albumin (20%)</div><div class="txd">Restores oncotic pressure; repeat until albumin stabilises.</div></div></div>
+        <div class="tx-step"><div class="txn" style="background:var(--steel)">3</div><div><div class="txt">Supportive Therapy</div><div class="txd">Low-Na diet · loop diuretic · LMWH · electrolyte replacement</div></div></div>
+        <div class="tx-step"><div class="txn" style="background:var(--mist)">4</div><div><div class="txt">Rheumatology Consult</div><div class="txd">Alt. SSc therapy (MMF/MTX); repeat Anti-Scl-70, ANA, Anti-RNA Pol III</div></div></div>
+        <div class="tx-step"><div class="txn" style="background:var(--grn)">5</div><div><div class="txt">Structured Follow-up</div><div class="txd">Monthly: urinalysis + albumin · Annually: HRCT · Echo · capillaroscopy</div></div></div>
+      </div>
+      <div class="box grn" style="margin-top:6px">
+        ✅ <b>Outcome:</b> Oedema ↓, distension ↓, appetite improved after withdrawal. Partial remission expected in weeks–months.
+      </div>
+     
+  </div>
+   <!-- <div class="box" style="margin-top:8px; padding:10px;"> -->
+  <div style="display:flex; gap:24px; justify-content:center; align-items:center;">
+    <img src="5.jpg"
+         alt="Clinical image 1"
+         style="width:80%; height:auto; object-fit:contain; border-radius:6px;">
+
+    <!-- </div> -->
+  </div>
+  </div>
+
+  <!-- LEARNING POINTS -->
+  <div class="card grow">
+    <div class="ch ch-amb"><span class="ico">🎯</span> Learning Points</div>
+    <div class="cb">
+      <ol class="lpl">
+        <li><span>Always take a full <b>drug history</b> in oedema — penicillamine is a reversible, underrecognised cause of NS.</span></li>
+        <li><span><b>Penicillamine-MN vs SRC:</b> same disease, different mechanism — ACEi lifesaving in SRC, unnecessary in drug-induced MN.</span></li>
+        <li><span><b>Correct Ca²⁺ for albumin:</b> Ca + 0.8 × (4.0 − Alb). Here: 8.68 mg/dL → avoid over-treating hypocalcaemia.</span></li>
+        <li><span>"Undifferentiated CTD" needs reassessment — <b>SSc</b> may emerge via capillaroscopy and autoantibody profiling.</span></li>
+        <li><span><b>Monitor penicillamine</b> every 1–3 months (urinalysis, CBC, albumin). Proteinuria &gt;1 g/day → immediate withdrawal.</span></li>
+        <li><span>Early withdrawal is curative — prevents <b>immunosuppression</b> and CKD progression.</span></li>
+      </ol>
+      <div class="box navy" style="margin-top:7px;font-size:11px">
+        💡 <b>Conclusion:</b> Drug reconciliation and structured DMARD monitoring are essential. Maintain a low threshold for drug-induced glomerulopathy in SSc + oedema. Early withdrawal → full recovery.
+      </div>
+
+        <div style="display:flex; gap:24px; justify-content:center; align-items:center;">
+    <img src="7.jpg"
+         alt="Clinical image 1"
+         style="width:80%; height:auto; object-fit:contain; border-radius:6px;">
+
+    <!-- </div> -->
+  </div>
+    </div>
+  </div>
+
+</div><!-- /right sidebar -->
+
+</div><!-- /body -->
+
+<!-- ══ FOOTER ══ -->
+<div class="footer">
+  <div><strong>Rasoul Akram Hospital</strong> · Dept. of Internal Medicine · Tehran, Iran · rasoulakram.tums.ac.ir</div>
+  <div style="text-align:center"><strong>Yekta Hashemi &amp; Mehrsa Farahani</strong> · Medical Students · Poster ID: IM-2025-0783</div>
+  <div style="text-align:right"><strong>Clinical Poster Presentation · June 2026</strong><br>Education with Patient Narratives</div>
+</div>
+
+</div><!-- /poster -->
+</body>
+</html>
