@@ -157,12 +157,33 @@ html, body {
 .aname { font-family:'Source Sans 3',sans-serif; font-weight:700; font-size:11.5px; color:rgba(255,255,255,.9); }
 .arole { font-size:9.5px; color:rgba(255,255,255,.45); }
 .qr-box {
-  width:68px; height:68px; background:var(--white);
-  border-radius:4px; flex-shrink:0;
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  gap:1.5px; padding:4px;
+  width: 120px;
+  height: 120px;
+  background: var(--white);
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5px;
+  padding: 4px;
 }
-.qr-box svg { width:44px; height:44px; }
+
+.qr-img {
+  width: 880px;
+  height: 88px;
+  object-fit: contain;
+  image-rendering: crisp-edges;
+}
+
+.qr-lbl {
+  font-size: 7.5px;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
 .qr-lbl { font-size:7.5px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:.4px; }
 
 /* ── ACCENT LINE ── */
@@ -436,25 +457,9 @@ hr.dv { border:none; height:1px; background:var(--linen); margin:5px 0; }
       </div>
     </div>
     <div class="qr-box">
-      <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="1" width="16" height="16" rx="2" stroke="#1e2d40" stroke-width="2" fill="none"/>
-        <rect x="4" y="4" width="10" height="10" rx="1" fill="#1e2d40"/>
-        <rect x="35" y="1" width="16" height="16" rx="2" stroke="#1e2d40" stroke-width="2" fill="none"/>
-        <rect x="38" y="4" width="10" height="10" rx="1" fill="#1e2d40"/>
-        <rect x="1" y="35" width="16" height="16" rx="2" stroke="#1e2d40" stroke-width="2" fill="none"/>
-        <rect x="4" y="38" width="10" height="10" rx="1" fill="#1e2d40"/>
-        <rect x="21" y="1" width="3" height="3" fill="#1e2d40"/><rect x="21" y="6" width="3" height="3" fill="#1e2d40"/>
-        <rect x="21" y="11" width="3" height="3" fill="#1e2d40"/><rect x="1" y="21" width="3" height="3" fill="#1e2d40"/>
-        <rect x="6" y="21" width="3" height="3" fill="#1e2d40"/><rect x="11" y="21" width="3" height="3" fill="#1e2d40"/>
-        <rect x="21" y="21" width="3" height="3" fill="#1e2d40"/><rect x="26" y="26" width="3" height="3" fill="#1e2d40"/>
-        <rect x="35" y="21" width="3" height="3" fill="#1e2d40"/><rect x="41" y="21" width="3" height="3" fill="#1e2d40"/>
-        <rect x="47" y="21" width="3" height="3" fill="#1e2d40"/><rect x="31" y="31" width="3" height="3" fill="#1e2d40"/>
-        <rect x="37" y="35" width="3" height="3" fill="#1e2d40"/><rect x="43" y="29" width="3" height="3" fill="#1e2d40"/>
-        <rect x="21" y="37" width="3" height="3" fill="#1e2d40"/><rect x="27" y="43" width="3" height="3" fill="#1e2d40"/>
-        <rect x="43" y="43" width="3" height="3" fill="#1e2d40"/><rect x="49" y="37" width="3" height="3" fill="#1e2d40"/>
-      </svg>
-      <div class="qr-lbl">Scan · Full<br>Report</div>
-    </div>
+  <img class="qr-img" src="QRcode.png" alt="QR Code">
+  <div class="qr-lbl">Scan · Full<br>Report</div>
+</div>
   </div>
 </div>
 <div class="stripe"></div>
